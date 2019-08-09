@@ -5,13 +5,10 @@ const TransactionModel = require('./models/transaction')
 const PayablesModel = require('./models/payables')
 
 
-const sequelize = new Sequelize('d7aqrv04pv9t70', 'dsdqorvrjmhbcw', '11d792e595a5bf2599a3bc40e49f2778321953f0a60ce04811a8a46ba0529ae6', {
-  host: 'ec2-54-227-251-33.compute-1.amazonaws.com',
-  port: '5432',
+const sequelize = new Sequelize('postgres', 'postgres', 'postgres', {
+  host: 'localhost',
+  port: '5435',
   dialect: 'postgres',
-  dialectOptions: {
-    ssl: true
-  },
   pool: {
     max: 10,
     min: 0,
@@ -32,10 +29,10 @@ Transaction.Payables = Transaction.belongsTo(Payables)
 Transaction.Client = Transaction.belongsTo(Client)
 Transaction.CreditCard = Transaction.belongsTo(CreditCard)
 
-/*sequelize.sync({ force: true })
+sequelize.sync()
   .then(() => {
     console.log(`Database & tables created!`)
-  })*/
+  })
 
 module.exports = {
     Client,

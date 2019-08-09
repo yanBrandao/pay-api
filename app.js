@@ -5,7 +5,11 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var creditCardRouter = require('./routes/credit_card');
+var clientsRouter = require('./routes/client');
+var transactionRouter = require('./routes/transaction');
+var payableRouter = require('./routes/payables');
+var swaggerUi = require('swagger-ui-express'), swaggerDocument = require('./swagger.json');
 
 var app = express();
 
@@ -20,7 +24,12 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/api/clients', usersRouter);
+app.use('/api/creditcards', creditCardRouter);
+app.use('/api/clients', clientsRouter);
+app.use('/api/transactions', transactionRouter);
+app.use('/api/payables', payableRouter);
+
+app.use('/api', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
