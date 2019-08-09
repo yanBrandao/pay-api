@@ -5,9 +5,9 @@ module.exports = (sequelize, type) => {
           primaryKey: true,
           autoIncrement: true
         },
-        card_number: type.STRING,
+        card_number: type.STRING(19),
         name: type.STRING,
-        cvv: type.STRING,
+        cvv: type.STRING(4),
         date_validation: type.DATE
     })
 }

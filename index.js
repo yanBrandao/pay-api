@@ -1,32 +1,23 @@
 const express = require('express')
 const bodyParser = require('body-parser')
+
+var indexRouter = require('./routes/index');
+var creditCardRouter = require('./routes/credit_card');
+var clientsRouter = require('./routes/client');
+var swaggerUi = require('swagger-ui-express'), swaggerDocument = require('./swagger.json');
+
 // dependencies
-const { Client, Payables, CreditCard, Transaction } = require('./sequelize')
 
 const app = express()
 app.use(bodyParser.json())
 
 // API ENDPOINTS
+app.use('/', indexRouter);
+app.use('/api/credit-cards', creditCardRouter);
+app.use('/api/clients', clientsRouter);
 
-// create a client
-app.post('/api/clients', (req, res) => {
-    Client.create(req.body)
-        .then(client => res.json(client))
-})
-// get all clients
-app.get('/api/clients', (req, res) => {
-    Client.findAll().then(clients => res.json(clients))
-})
-
-// create a client
-app.post('/api/credit_cards', (req, res) => {
-    CreditCard.create(req.body)
-        .then(creditCard => res.json(creditCard))
-})
-// get all clients
-app.get('/api/credit_cards', (req, res) => {
-    CreditCard.findAll().then(creditCards => res.json(creditCards))
-})
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+//app.use('/api/v1', router);
 
 const port = 3000
 app.listen(port, () => {

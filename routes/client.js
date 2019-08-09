@@ -1,6 +1,10 @@
 var express = require('express');
 var router = express.Router();
 
+
+// dependencies
+const { Client } = require('../sequelize')
+
 // create a client
 router.post('/', (req, res) => {
     Client.create(req.body)

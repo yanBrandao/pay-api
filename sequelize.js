@@ -5,10 +5,13 @@ const TransactionModel = require('./models/transaction')
 const PayablesModel = require('./models/payables')
 
 
-const sequelize = new Sequelize('pay_db', 'postgres', 'postgres', {
-  host: 'localhost',
-  port: '5435',
+const sequelize = new Sequelize('d7aqrv04pv9t70', 'dsdqorvrjmhbcw', '11d792e595a5bf2599a3bc40e49f2778321953f0a60ce04811a8a46ba0529ae6', {
+  host: 'ec2-54-227-251-33.compute-1.amazonaws.com',
+  port: '5432',
   dialect: 'postgres',
+  dialectOptions: {
+    ssl: true
+  },
   pool: {
     max: 10,
     min: 0,
