@@ -28,14 +28,14 @@ const Transaction = TransactionModel(sequelize, Sequelize)
 const Payables = PayablesModel(sequelize, Sequelize)
 
 
-Transaction.belongsTo(Payables)
-Transaction.belongsTo(Client)
-Transaction.belongsTo(CreditCard)
+Transaction.Payables = Transaction.belongsTo(Payables)
+Transaction.Client = Transaction.belongsTo(Client)
+Transaction.CreditCard = Transaction.belongsTo(CreditCard)
 
-sequelize.sync({ force: true })
+/*sequelize.sync({ force: true })
   .then(() => {
     console.log(`Database & tables created!`)
-  })
+  })*/
 
 module.exports = {
     Client,
