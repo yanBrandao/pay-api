@@ -1,6 +1,5 @@
 # pay-api
-[![Build Status](https://travis-ci.org/yanBrandao/pay-api.svg?branch=dev)](https://travis-ci.org/yanBrandao/pay-api)
-
+[![Build Status](https://travis-ci.org/yanBrandao/pay-api.svg?branch=dev)](https://travis-ci.org/yanBrandao/pay-api) [![Coverage Status](https://coveralls.io/repos/github/yanBrandao/pay-api/badge.svg?branch=dev)](https://coveralls.io/github/yanBrandao/pay-api?branch=dev)
 ## Introduction
 
 Payment API is a Web API for payment, this api was made using [Express](https://expressjs.com/pt-br/) framework and [Sequelize](https://sequelize.org/) for ORM, database used was postgres and for test was used [HerokuApp](https://herokuapp.com/) for cloud database. Documentation was made with [SwaggerUI](https://swagger.io/tools/swagger-ui/) to help user api test endpoints and complete visualization of project. For unit test was user [Mocha](https://mochajs.org/) and [Istanbul](https://istanbul.js.org/) for coverage report. For CI and validation of project was used [TravisCI](https://travis-ci.org/)

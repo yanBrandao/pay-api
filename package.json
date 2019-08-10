@@ -8,7 +8,7 @@
     "prod": "set NODE_ENV=production&& node bin/www",
     "unit-test": "set NODE_ENV=test&& mocha --timeout 10000 'test/**/*.spec.js'",
     "coverage": "istanbul cover node_modules/mocha/bin/_mocha -- 'test/**/*.spec.js' -R spec",
-    "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
+    "coveralls": "set NODE_ENV=test&&npm run coverage -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
   },
   "dependencies": {
     "chai": "^4.2.0",
@@ -20,6 +20,7 @@
     "http-errors": "~1.6.3",
     "istanbul": "^0.4.5",
     "mocha": "^6.2.0",
+    "mocha-lcov-reporter": "^1.3.0",
     "morgan": "~1.9.1",
     "pg": "^7.12.0",
     "sinon": "^7.4.1",
