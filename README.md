@@ -17,11 +17,26 @@ The application is working like requested, but there are more things to do, befo
 
 - At least node 8
 - yarn or npm
+- docker
 
-### Briefing
+### Briefing (Test environment)
+
 
 `yarn install` or `npm install`
 `yarn test` or `npm run test`
 
 Testing endpoints: [http://localhost:3000/api/](http://localhost:3000/api/)
 
+### Briefing (development environment)
+
+`docker rm -f db || true && docker run -d -p "5436:5432" -e POSTGRES_PASSWORD=password --name db postgres` for local database
+
+```docker
+//for build node api
+docker build -f docker\deploy\Dockerfile --tag pay-api .
+
+//for run node api
+docker rm -f pay-api || true && docker run -v node_modules:/usr/app/node_modules -p 3000:3000 --name pay-api pay-api
+```
+
+Testing endpoints: [http://localhost:3000/api/](http://localhost:3000/api/)
