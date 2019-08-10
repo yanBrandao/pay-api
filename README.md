@@ -8,8 +8,6 @@ Pay-api has two main goals, that is to store every transaction made by clients i
 
 Using this api, its possible to see all payables to a specific client, passing only client id it can possible to see what was paid and waiting funds.
 
-The application is working like requested, but there are more things to do, before implement in production, like do some validations to optimize credit card data, create a routine if waiting funds date pass, change to paid without change fee.
-
 ## Running instructions
 
 ### Requisites
