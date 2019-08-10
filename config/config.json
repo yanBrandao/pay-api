@@ -1,14 +1,4 @@
 {
-  "development": {
-    "username": "postgres",
-    "password": "password",
-    "database": "postgres",
-    "host": "localhost",
-    "port": "5436",
-    "dialect": "postgres",
-    "operatorsAliases": false,
-    "ssl": false
-  },
   "test": {
     "username": "dsdqorvrjmhbcw",
     "password": "11d792e595a5bf2599a3bc40e49f2778321953f0a60ce04811a8a46ba0529ae6",
@@ -18,6 +8,16 @@
     "dialect": "postgres",
     "operatorsAliases": false,
     "ssl": true
+  },
+  "development": {
+    "username": "postgres",
+    "password": "password",
+    "database": "postgres",
+    "host": "localhost",
+    "port": "5436",
+    "dialect": "postgres",
+    "operatorsAliases": false,
+    "ssl": false
   },
   "production": {
     "username": "dsdqorvrjmhbcw",
