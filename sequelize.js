@@ -9,7 +9,7 @@ const app = express();
 
 var env = app.get('env');
 var envItems = '';
-if(env ==  "test "){
+if(env ==  "test"){
   envItems = config.test;
 } else {
   envItems = config.development;
