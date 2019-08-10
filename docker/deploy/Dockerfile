@@ -2,10 +2,6 @@ FROM node:8.11.2-alpine
 
 WORKDIR /usr/app
 
-RUN npm config set unsafe-perm true \
-    && npm install -g yarn \
-    && yarn config set cache-folder /root/.yarn.cache
-
 EXPOSE 3000
 
 COPY . .

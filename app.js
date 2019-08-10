@@ -4,11 +4,11 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var creditCardRouter = require('./routes/credit_card');
-var clientsRouter = require('./routes/client');
-var transactionRouter = require('./routes/transaction');
-var payableRouter = require('./routes/payables');
+var indexRouter = require('./controllers/index');
+var creditCardRouter = require('./controllers/credit_card');
+var clientsRouter = require('./controllers/client');
+var transactionRouter = require('./controllers/transaction');
+var payableRouter = require('./controllers/payables');
 var swaggerUi = require('swagger-ui-express'), swaggerDocument = require('./swagger.json');
 
 var app = express();

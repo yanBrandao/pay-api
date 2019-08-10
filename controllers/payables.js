@@ -1,9 +1,9 @@
 var express = require('express');
-const Sequelize = require('sequelize')
+const Sequelize = require('sequelize');
 var router = express.Router();
 
 // dependencies
-const { Payables, Transaction } = require('../sequelize')
+const { Payables, Transaction } = require('../sequelize');
 
 // get Payable from a Client
 router.get('/', (req, res) => {
@@ -24,8 +24,8 @@ router.get('/', (req, res) => {
         group: ['payment_method', 'clientId']
     }).then(payables =>{
         console.log(payables);
-         res.json(payables);})
-})
+         res.json(payables);});
+});
 
 module.exports = router;
 

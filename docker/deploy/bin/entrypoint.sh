@@ -1,3 +1,3 @@
 #!/bin/sh
 set -e
-yarn start
+npm install && npm run test

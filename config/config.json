@@ -3,25 +3,30 @@
     "username": "postgres",
     "password": "postgres",
     "database": "postgres",
-    "host": "localhost",
-    "port": "5435",
-    "dialect": "pg",
-    "operatorsAliases": false
+    "host": "172.16.1.3",
+    "port": "5436",
+    "dialect": "postgres",
+    "operatorsAliases": false,
+    "ssl": false
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql",
-    "operatorsAliases": false
+    "username": "dsdqorvrjmhbcw",
+    "password": "11d792e595a5bf2599a3bc40e49f2778321953f0a60ce04811a8a46ba0529ae6",
+    "database": "d7aqrv04pv9t70",
+    "port": "5432",
+    "host": "ec2-54-227-251-33.compute-1.amazonaws.com",
+    "dialect": "postgres",
+    "operatorsAliases": false,
+    "ssl": true
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql",
-    "operatorsAliases": false
+    "username": "dsdqorvrjmhbcw",
+    "password": "11d792e595a5bf2599a3bc40e49f2778321953f0a60ce04811a8a46ba0529ae6",
+    "database": "d7aqrv04pv9t70",
+    "port": "5432",
+    "host": "ec2-54-227-251-33.compute-1.amazonaws.com",
+    "dialect": "postgres",
+    "operatorsAliases": false,
+    "ssl": true
   }
 }

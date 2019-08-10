@@ -2,6 +2,7 @@ language: node_js
 
 node_js:
   - '10.15.0'
+  - iojs
 
 cache:
   yarn: true
@@ -10,3 +11,5 @@ cache:
 
 script:
   - yarn test
+
+after_success: yarn coveralls

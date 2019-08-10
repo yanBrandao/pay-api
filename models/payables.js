@@ -8,5 +8,5 @@ module.exports = (sequelize, type) => {
         status: type.STRING,
         payment_date: type.DATE,
         fee: type.FLOAT
-    })
-}
+    });
+};

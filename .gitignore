@@ -59,3 +59,4 @@ typings/
 
 # next.js build output
 .next
+"# Coverage reports\ncoverage\ncoverage/\ncoverage/*\n" 

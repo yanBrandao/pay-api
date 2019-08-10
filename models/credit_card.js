@@ -18,4 +18,4 @@ CreditCard.beforeCreate(function(model, options){
 });
 
     return CreditCard;
-}
+};

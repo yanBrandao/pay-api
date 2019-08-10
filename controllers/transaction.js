@@ -3,16 +3,16 @@ var router = express.Router();
 
 
 // dependencies
-const { Transaction } = require('../sequelize')
-const { Payables } = require('../sequelize')
-const { CreditCard } = require('../sequelize')
+const { Transaction } = require('../sequelize');
+const { Payables } = require('../sequelize');
+const { CreditCard } = require('../sequelize');
 
 // create a transaction
 router.post('/', (req, res) => {
   var transaction = req.body;
   var payable = new Payables();
 
-  console.log(req.headers);
+  console.log(transaction);
 
   transaction.clientId = req.headers.clientid;
 
@@ -35,13 +35,13 @@ router.post('/', (req, res) => {
     Payables.create(payable.dataValues).then(payable => {
       transaction.payableId = payable.dataValues.id;
       Transaction.create(transaction)
-        .then(transac => res.json(transac))
+        .then(transac => res.json(transac));
     });
   });
-})
+});
 // get all clients
 router.get('/', (req, res) => {
-  Transaction.findAll().then(clients => res.json(clients))
-})
+  Transaction.findAll().then(clients => res.json(clients));
+});
 
 module.exports = router;

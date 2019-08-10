@@ -3,16 +3,22 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node bin/www",
-    "test": "mocha"
+    "dev": "set NODE_ENV=development && node bin/www",
+    "test": "set NODE_ENV=test && node bin/www",
+    "prod": "set NODE_ENV=production && node bin/www",
+    "unit-test": "mocha --timeout 10000 'test/**/*.spec.js'",
+    "coverage": "istanbul cover node_modules/mocha/bin/_mocha -- 'test/**/*.spec.js' -R spec",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
   },
   "dependencies": {
     "chai": "^4.2.0",
     "cookie-parser": "~1.4.4",
+    "coveralls": "^3.0.6",
     "debug": "~2.6.9",
     "ejs": "~2.6.1",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
+    "istanbul": "^0.4.5",
     "mocha": "^6.2.0",
     "morgan": "~1.9.1",
     "pg": "^7.12.0",

@@ -6,5 +6,5 @@ module.exports = (sequelize, type) => {
           autoIncrement: true
         },
         name: type.STRING
-    })
-}
+    });
+};

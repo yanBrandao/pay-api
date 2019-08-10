@@ -1,18 +1,17 @@
 var express = require('express');
 var router = express.Router();
 
-
 // dependencies
-const { Client } = require('../sequelize')
+const { Client } = require('../sequelize');
 
 // create a client
 router.post('/', (req, res) => {
     Client.create(req.body)
-        .then(client => res.json(client))
-})
+        .then(client => res.json(client));
+});
 // get all clients
 router.get('/', (req, res) => {
-    Client.findAll().then(clients => res.json(clients))
-})
+    Client.findAll().then(clients => res.json(clients));
+});
 
 module.exports = router;
