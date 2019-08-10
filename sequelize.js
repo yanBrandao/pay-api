@@ -50,6 +50,7 @@ Transaction.Payables = Transaction.belongsTo(Payables);
 Transaction.Client = Transaction.belongsTo(Client);
 Transaction.CreditCard = Transaction.belongsTo(CreditCard);
 
+console.log(app.get('env'));
 if(app.get('env') == 'development'){
 sequelize.sync({force: true})
   .then(() => {
