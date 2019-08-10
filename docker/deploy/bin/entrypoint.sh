@@ -1,3 +1,3 @@
 #!/bin/sh
 set -e
-npm install && npm run test
+npm install && npm run dev

@@ -4,6 +4,8 @@ WORKDIR /usr/app
 
 EXPOSE 3000
 
+ENV ADDR=host.docker.internal
+
 COPY . .
 
 COPY ./docker/deploy/bin/entrypoint.sh /entrypoint.original.sh

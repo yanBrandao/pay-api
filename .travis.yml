@@ -10,6 +10,6 @@ cache:
     - node_modules
 
 script:
-  - yarn test
+  - yarn unit-test
 
 after_success: yarn coveralls

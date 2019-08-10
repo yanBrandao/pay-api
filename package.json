@@ -6,7 +6,7 @@
     "dev": "set NODE_ENV=development && node bin/www",
     "test": "set NODE_ENV=test && node bin/www",
     "prod": "set NODE_ENV=production && node bin/www",
-    "unit-test": "mocha --timeout 10000 'test/**/*.spec.js'",
+    "unit-test": "set NODE_ENV=test && mocha --timeout 10000 'test/**/*.spec.js'",
     "coverage": "istanbul cover node_modules/mocha/bin/_mocha -- 'test/**/*.spec.js' -R spec",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
   },

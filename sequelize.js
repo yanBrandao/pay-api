@@ -13,6 +13,8 @@ if(env ==  "test "){
   envItems = config.test;
 } else {
   envItems = config.development;
+  envItems.host = process.env.ADDR;
+  console.log(envItems);
 }
 var database = envItems.database;
 var username = envItems.username;
@@ -48,10 +50,12 @@ Transaction.Payables = Transaction.belongsTo(Payables);
 Transaction.Client = Transaction.belongsTo(Client);
 Transaction.CreditCard = Transaction.belongsTo(CreditCard);
 
+if(app.get('env') == 'development'){
 sequelize.sync({force: true})
   .then(() => {
     console.log(`Database & tables created!`);
   });
+}
 
   
 module.exports = {
