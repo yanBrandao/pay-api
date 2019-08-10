@@ -1,4 +1,4 @@
-# pay-api
+# pay-api 💸
 [![Build Status](https://travis-ci.org/yanBrandao/pay-api.svg?branch=dev)](https://travis-ci.org/yanBrandao/pay-api) [![Coverage Status](https://coveralls.io/repos/github/yanBrandao/pay-api/badge.svg?branch=dev)](https://coveralls.io/github/yanBrandao/pay-api?branch=dev)
 ## Introduction
 
