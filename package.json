@@ -29,6 +29,6 @@
   },
   "devDependencies": {
     "pg-hstore": "^2.3.3",
-    "sequelize": "^5.12.3"
+    "sequelize": "^5.15.1"
   }
 }
